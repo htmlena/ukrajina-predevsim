@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const Nav = styled.nav``;
@@ -20,8 +21,10 @@ const ListItem = styled.li`
   }
 `;
 
-const Link = styled.a`
+const LinkItem = styled.a`
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 
   &:hover,
   &:focus {
@@ -34,16 +37,24 @@ const Navbar = () => {
     <Nav>
       <List>
         <ListItem>
-          <Link>Literatura</Link>
+          <Link href="/literatura" passHref>
+            <LinkItem>Literatura</LinkItem>
+          </Link>
         </ListItem>
         <ListItem>
-          <Link>Hudba</Link>
+          <Link href="/hudba" passHref>
+            <LinkItem>Hudba</LinkItem>
+          </Link>
         </ListItem>
         <ListItem>
-          <Link>Umění</Link>
+          <Link href="/umeni" passHref>
+            <LinkItem>Umění</LinkItem>
+          </Link>
         </ListItem>
         <ListItem>
-          <Link>Jazyk</Link>
+          <Link href="/jazyk" passHref>
+            <LinkItem>Jazyk</LinkItem>
+          </Link>
         </ListItem>
       </List>
     </Nav>

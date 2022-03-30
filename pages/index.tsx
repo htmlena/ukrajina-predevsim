@@ -17,6 +17,7 @@ const Title = styled.h1`
 
 const Header = styled.header`
   padding: 1rem;
+  position: relative;
 
   @media (min-width: 768px) {
     padding: 2rem;
@@ -31,9 +32,35 @@ const Main = styled.main`
   // }
 `;
 
+const Footer = styled.footer`
+  padding: 1rem;
+  color: gray;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+`;
+
+// const DotBlue = styled.div`
+//   position: absolute;
+//   top: 38px;
+//   right: 128px;
+//   width: 13px;
+//   height: 13px;
+//   background-color: blue;
+//   border-radius: 50%;
+// `;
+
+// const DotYellow = styled.div`
+//   width: 15px;
+//   height: 15px;
+//   background-color: blue;
+//   border-radius: 50%;
+// `;
+
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="Pages about Ukrainian culture" />
@@ -55,7 +82,10 @@ const Home = () => {
         <SectionPreview title="Umění" />
         <SectionPreview title="Jazyk" />
       </Main>
-    </div>
+      <Footer>
+        <div>© 2022 Projekt o ukrajinské kultuře</div>
+      </Footer>
+    </>
   );
 };
 
