@@ -1,45 +1,39 @@
 import { FC } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { mq } from '../../utils/styles';
 
 import Image from 'next/image';
 
 type SectionPreviewProps = {
   title: string;
+  isImageLeft?: boolean;
 };
 
-const Container = styled.div`
+const Container = styled.div<{ isImageLeft?: boolean }>`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border: 1px solid black;
   padding: 6rem;
+  ${({ isImageLeft }) =>
+    isImageLeft &&
+    css`
+      flex-direction: row-reverse;
+    `}
+  ${mq.small.css`
+  padding: 1rem;
+ `}
 `;
 
 const Title = styled.h2`
   color: blue;
 `;
 
-// const SectionImage = (props) => {
-//   return (
-//     <Image
-//       src={
-//         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F941607221092508263&psig=AOvVaw3nrDvRMUbT_wll3CwFtg1N&ust=1648731947218000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNCvjqjz7fYCFQAAAAAdAAAAABAD'
-//       }
-//       alt="ff"
-//       width="350px"
-//       height="300px"
-//     ></Image>
-//   );
-// };
-
-const SectionPreview: FC<SectionPreviewProps> = ({ title }) => {
+const SectionPreview: FC<SectionPreviewProps> = ({ title, isImageLeft }) => {
   return (
-    <Container>
+    <Container isImageLeft={isImageLeft}>
       <Title>{title}</Title>
-      {/* <Image
-        src="/public/cover.png"
-        width="350px"
-        height="300px"
-        alt="Hero image"
-      /> */}
+      <Image src="/cover.png" width="350px" height="300px" alt="Hero image" />
     </Container>
   );
 };
