@@ -8,11 +8,17 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
   font-size: 3rem;
-  margin: 1rem 0 1rem;
+  margin: 0 0 1rem;
 
   @media (min-width: 768px) {
     font-size: 8rem;
   }
+`;
+
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;
 
 const Header = styled.header`
@@ -25,11 +31,14 @@ const Header = styled.header`
 `;
 
 const Main = styled.main`
-  // padding: 1rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  // padding: 0 1rem 1rem;
 
-  // @media (min-width: 768px) {
-  //   padding: 2rem;
-  // }
+  @media (min-width: 768px) {
+    // padding: 0 2rem 2rem;
+  }
 `;
 
 const Footer = styled.footer`
@@ -45,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>O Ukrajině</title>
         <meta name="description" content="Pages about Ukrainian culture" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,16 +64,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         ></link>
       </Head>
-      <Header>
-        <Title>O Ukrajině</Title>
-        <Navbar />
-      </Header>
-      <Main>
-        <Component {...pageProps} />
-      </Main>
-      <Footer>
-        <div>© 2022 Projekt o ukrajinské kultuře</div>
-      </Footer>
+      <Layout>
+        <Header>
+          <Title>O Ukrajině</Title>
+          <Navbar />
+        </Header>
+        <Main>
+          <Component {...pageProps} />
+        </Main>
+        <Footer>
+          <div>© 2022 Projekt o ukrajinské kultuře</div>
+        </Footer>
+      </Layout>
     </>
   );
 }
