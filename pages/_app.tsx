@@ -11,7 +11,7 @@ const Title = styled.h1`
   margin: 0 0 1rem;
 
   @media (min-width: 768px) {
-    font-size: 8rem;
+    font-size: 5rem;
   }
 `;
 
@@ -22,11 +22,20 @@ const Layout = styled.div`
 `;
 
 const Header = styled.header`
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   position: relative;
 
   @media (min-width: 768px) {
-    padding: 2rem;
+    padding: 1rem 3rem;
+  }
+`;
+
+const Intro = styled.div`
+  background-color: #a2a2a2;
+  padding: 0.8rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 1rem 3rem;
   }
 `;
 
@@ -70,6 +79,16 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Navbar />
         </Header>
         <Main>
+          <Intro>
+            <div>Projekt o ukrajinské kultuře a literatuře</div>
+            <div>
+              „Ukrajinské umění bylo vždy víc aktivistické, občanské,
+              promlouvalo o tom, co se kolem nás děje.“ Poznejte ukrajinskou
+              kulturu ještě lépe.
+              {/* Zdroj:
+            https://www.lidovky.cz/domov/cesko-ukrajina-ukrajinci-kultura-krtecek-uprchlici-bezenci.A220325_145052_ln_domov_lros */}
+            </div>
+          </Intro>
           <Component {...pageProps} />
         </Main>
         <Footer>

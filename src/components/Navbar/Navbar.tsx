@@ -17,7 +17,8 @@ const ListItem = styled.li`
   padding-right: 0.6rem;
 
   @media (min-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    padding-right: 4.6rem;
   }
 `;
 
