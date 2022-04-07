@@ -4,7 +4,7 @@ export const breakpoints = {
   small: 320,
   medium: 750,
   large: 1120,
-  xlarge: 1280,
+  xlarge: 1300,
 };
 
 export const mq = {
@@ -57,6 +57,13 @@ export const mq = {
   large: {
     css: (arg, ...args) => css`
       @media (min-width: ${breakpoints.large}px) {
+        ${css(arg, ...args)};
+      }
+    `,
+  },
+  xlarge: {
+    css: (arg, ...args) => css`
+      @media (min-width: ${breakpoints.xlarge}px) {
         ${css(arg, ...args)};
       }
     `,

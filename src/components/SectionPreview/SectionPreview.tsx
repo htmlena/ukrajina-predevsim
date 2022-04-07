@@ -12,14 +12,17 @@ type SectionPreviewProps = {
 const Container = styled.div<{ isImageLeft?: boolean }>`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
+  margin: 0 auto;
+  background-color: #ffff55;
   ${({ isImageLeft }) =>
     isImageLeft &&
     css`
       flex-direction: row-reverse;
     `}
-  ${mq.small.css`
- `}
+  ${mq.large.css`
+    // width: 80%;
+ `};
 `;
 
 const Title = styled.h2`
@@ -27,7 +30,6 @@ const Title = styled.h2`
   padding: 9rem 6rem;
   background-color: #ffff55;
   margin: 0;
-  flex-basis: 20%;
   ${mq.small.css`
     padding: 4rem 1rem;
  `}
@@ -35,7 +37,9 @@ const Title = styled.h2`
 
 const ImageContainer = styled.div`
   width: 100%;
-  flex-basis: 80%;
+  background-color: #ffff55;
+  ${mq.large.css`
+ `}
 `;
 
 const ImageDiv = styled.div<{ background: string }>`
@@ -43,6 +47,9 @@ const ImageDiv = styled.div<{ background: string }>`
   background: ${(props) => `url(${props.background}) no-repeat top center`};
   background-size: cover;
   height: 100%;
+  ${mq.large.css`
+    // width: 80%;
+ `}
 `;
 
 const SectionPreview: FC<SectionPreviewProps> = ({

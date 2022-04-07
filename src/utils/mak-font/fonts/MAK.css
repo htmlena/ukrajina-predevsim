@@ -1,0 +1,9 @@
+/* Webfont: Mak-Light */@font-face {
+    font-family: 'MakLight';
+    src: url('MAK.woff2') format('woff2'), /* Modern Browsers */
+         url('MAK.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,27 +1,12 @@
 // import type { NextPage } from 'next'
 import SectionPreview from '../src/components/SectionPreview/SectionPreview';
-
-// const DotBlue = styled.div`
-//   position: absolute;
-//   top: 38px;
-//   right: 128px;
-//   width: 13px;
-//   height: 13px;
-//   background-color: blue;
-//   border-radius: 50%;
-// `;
-
-// const DotYellow = styled.div`
-//   width: 15px;
-//   height: 15px;
-//   background-color: blue;
-//   border-radius: 50%;
-// `;
+import SquareBlock from '../src/components/SquareBlock/SquareBlock';
 
 const Home = () => {
   return (
     <>
-      <SectionPreview
+      <SquareBlock />
+      {/* <SectionPreview
         title="Literatura"
         background={'/rostislav-artov-Gx5RF9rXVkE-unsplash.webp'}
         // image={'/dalibor-bosnjakovic-Zfg9GZ7yLcU-unsplash.jpg'}
@@ -42,7 +27,7 @@ const Home = () => {
         background={'/volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
         // image={'/volodymyr-tokar-W6eVy5wy8-M-unsplash.jpg'}
         isImageLeft
-      />
+      /> */}
     </>
   );
 };
