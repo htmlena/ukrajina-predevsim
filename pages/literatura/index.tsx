@@ -1,5 +1,7 @@
+import ArticleContent from '../../src/components/ArticleContent/ArticleContent';
+
 const Literatura = () => {
-  return <div>literatura</div>;
+  return <ArticleContent />;
 };
 
 export default Literatura;

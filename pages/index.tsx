@@ -10,10 +10,9 @@ const Home = () => {
     padding: 0 1.2rem;
     row-gap: 1rem;
 
-    ${mq.mediumUp.css`
+    ${mq.largeUp.css`
   // flex-direction: row;
    grid-template-columns: 2fr 1fr 1fr;
-   grid-template-rows: 2fr;
     column-gap: 1rem;
     padding: 0 3rem;
  `}
@@ -31,32 +30,32 @@ const Home = () => {
           shortDescription="„Ukrajinské umění bylo vždy víc aktivistické, občanské,
                 promlouvalo o tom, co se kolem nás děje.“"
           cardColor="#fec9e5"
-          cardTextColor="#3A6BA4"
+          cardTextColor="#0057b8"
         />
         <SquareBlock
           title="Ukrajinský jazyk"
-          cardColor="#F4E2A3"
+          cardColor="#ffd700"
           cardTextColor="#A74D4D"
         />
         <SquareBlock
           title="Ukrajinská hudba"
           cardColor="#CBA5FC"
-          cardTextColor="#595287"
+          cardTextColor="#F3F3F3"
         />
         <SquareBlock
           title="Ukrajinská literatura"
-          cardColor="#79A4E7"
+          cardColor="#0057b8"
           cardTextColor="#F4E2A3"
         />
         <SquareBlock
           title="O projektu"
           cardColor="#F3F3F3"
-          cardTextColor="#3A6BA4"
+          cardTextColor="#0057b8"
         />
         <SquareBlock
           title="Články"
           cardColor="#F3F3F3"
-          cardTextColor="#3A6BA4"
+          cardTextColor="#0057b8"
         />
       </TopSectionContainer>
     </>

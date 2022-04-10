@@ -88,6 +88,10 @@ const Main = styled.main`
 `;
 
 const MainContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   ${mq.xlarge.css`
   width: 70%;
   margin: 0 auto;
