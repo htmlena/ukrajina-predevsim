@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mq } from '../../utils/styles';
+import { mq } from '../../utils/breakpoints';
 
 export const SquareContainer = styled.a<{
   cardColor: string;

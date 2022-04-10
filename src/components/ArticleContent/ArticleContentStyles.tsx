@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mq } from '../../utils/styles';
+import { mq } from '../../utils/breakpoints';
 
 export const HeaderContainer = styled.div`
   display: flex;

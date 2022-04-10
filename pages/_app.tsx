@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import Link from 'next/link';
 import type { AppProps } from 'next/app';
-import { mq } from '../src/utils/styles';
+import { mq } from '../src/utils/breakpoints';
 
 import Head from 'next/head';
 import Navbar from '../src/components/Navbar/Navbar';

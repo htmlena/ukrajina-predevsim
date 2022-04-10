@@ -1,6 +1,6 @@
 import SquareBlock from '../src/components/SquareBlock/SquareBlock';
 import styled from 'styled-components';
-import { mq } from '../src/utils/styles';
+import { mq } from '../src/utils/breakpoints';
 
 const Home = () => {
   const TopSectionContainer = styled.section`
