@@ -2,6 +2,7 @@ import SquareBlock from '../src/components/SquareBlock/SquareBlock';
 import styled from 'styled-components';
 import { mq } from '../src/utils/breakpoints';
 import { PreviewSection } from '../src/components/PreviewSection/PreviewSection';
+import { ArticlePreview } from '../src/components/ArticlePreview.tsx/ArticlePreview';
 
 const Home = () => {
   const TopSectionContainer = styled.div`
@@ -25,15 +26,32 @@ const Home = () => {
 
   const FirstColumnContainer = styled.section`
     display: flex;
+    ${mq.mediumUp.css`
+      flex-basis: 50%;
+ `}
   `;
 
   const SecondColumnContainer = styled.section`
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    ${mq.mediumUp.css`
+      flex-direction: row;
+      flex-basis: 50%;
+ `}
   `;
 
-  const SubsectionOne = styled.section``;
-  const SubsectionTwo = styled.section``;
+  const SubsectionOne = styled.section`
+    ${mq.mediumUp.css`
+      flex-basis: 40%;
+ `}
+  `;
+  const SubsectionTwo = styled.section`
+    border: 1px solid #e1e1e1;
+    ${mq.mediumUp.css`
+      flex-basis: 40%;
+ `}
+  `;
 
   return (
     <>
@@ -49,10 +67,47 @@ const Home = () => {
         </FirstColumnContainer>
         <SecondColumnContainer>
           <SubsectionOne>
-            <PreviewSection title={'Článek'} />
-            <PreviewSection title={'Článek'} />
+            <PreviewSection
+              title={'Článek'}
+              image={'artur-zhadan-wv7GyOu66r8-unsplash.webp'}
+            />
+            <PreviewSection
+              title={'Článek'}
+              image={'volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
+            />
           </SubsectionOne>
-          <SubsectionTwo></SubsectionTwo>
+          <SubsectionTwo>
+            <ArticlePreview
+              date={'1. září'}
+              title={
+                'Plošná pomoc lidem inflaci jedině zhorší, řekla ekonomka, která radí Fialovi'
+              }
+            />
+            <ArticlePreview
+              date={'11. srpna'}
+              title={
+                'Třetí světová válka začala, oznámila moderátorka ruské televize'
+              }
+            />
+            <ArticlePreview
+              date={'21. srpna'}
+              title={
+                'Viníci dopravních nehod podle továrních značek 2021: Patnácti největším hříšníkům kraluje Iveco'
+              }
+            />
+            <ArticlePreview
+              date={'3. července'}
+              title={
+                'Žaludek na vodě, motání hlavy a slabost. Nejlepší pomocníci proti nevolnosti, které najdete ve spíži'
+              }
+            />
+            <ArticlePreview
+              date={'3. června'}
+              title={
+                'Staré džíny nevyhazovat! Vyrobte si z nich prostírání, zástěru nebo kabelku '
+              }
+            />
+          </SubsectionTwo>
         </SecondColumnContainer>
         {/* <SquareBlock
           title="Ukrajinský jazyk"

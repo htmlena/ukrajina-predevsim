@@ -6,9 +6,8 @@ const PreviewSectionContainer = styled.div`
   flex-direction: column;
 `;
 
-const PreviewImage = styled.div`
-  background: no-repeat center/100%
-    url('artur-zhadan-wv7GyOu66r8-unsplash.webp');
+const PreviewImage = styled.div<{ image: string }>`
+  background: ${(props) => `url(${props.image}) no-repeat center/100%`};
   position: relative;
   width: 330px;
   height: 220px;
@@ -26,19 +25,19 @@ const PreviewOverlay = styled.div`
 
 type PreviewTitleProps = {
   title: string;
+  image: string;
 };
 
 const PreviewTitle = styled.div`
   font-weight: 600;
   border-bottom: 2px solid black;
   padding: 0.6rem;
-  margin-bottom: 2rem;
 `;
 
-export const PreviewSection: FC<PreviewTitleProps> = ({ title }) => {
+export const PreviewSection: FC<PreviewTitleProps> = ({ title, image }) => {
   return (
     <PreviewSectionContainer>
-      <PreviewImage>
+      <PreviewImage image={image}>
         <PreviewOverlay />
       </PreviewImage>
       <PreviewTitle>{title}</PreviewTitle>
