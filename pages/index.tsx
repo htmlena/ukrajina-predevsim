@@ -6,39 +6,48 @@ import { ArticlePreview } from '../src/components/ArticlePreview.tsx/ArticlePrev
 
 const Home = () => {
   const TopSectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.2rem;
-
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-areas:
+      'firstColumn'
+      'secondColumn'
+      'thirdColumn';
+    // padding: 0 1.2rem;
     ${mq.mediumUp.css`
       flex-direction: row;
+      grid-template-areas: 'firstColumn secondColumn thirdColumn';
  `}
-
     ${mq.largeUp.css`
   // flex-direction: row;
     padding: 0 3rem;
  `}
-
-    ${mq.xlarge.css`
+      ${mq.xlarge.css`
       padding: 0;
- `}
+ `};
   `;
 
   const FirstColumnContainer = styled.section`
     display: flex;
-    ${mq.mediumUp.css`
-      flex-basis: 50%;
+    grid-area: firstColumn;
+    ${mq.largeUp.css`
+      flex-basis: 40%;
  `}
   `;
 
   const SecondColumnContainer = styled.section`
     display: flex;
     flex-direction: column;
+    grid-area: secondColumn;
     justify-content: space-around;
-    ${mq.mediumUp.css`
+    ${mq.largeUp.css`
       flex-direction: row;
       flex-basis: 50%;
  `}
+  `;
+
+  const ThirdColumnContainer = styled.section`
+    grid-area: thirdColumn;
   `;
 
   const SubsectionOne = styled.section`
@@ -61,7 +70,7 @@ const Home = () => {
             title="Ukrajinské umění"
             shortDescription="„Ukrajinské umění bylo vždy víc aktivistické, občanské,
                 promlouvalo o tom, co se kolem nás děje.“"
-            cardColor="#fec9e5"
+            cardColor="#ffd700"
             cardTextColor="#0057b8"
           />
         </FirstColumnContainer>
@@ -76,6 +85,8 @@ const Home = () => {
               image={'volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
             />
           </SubsectionOne>
+        </SecondColumnContainer>
+        <ThirdColumnContainer>
           <SubsectionTwo>
             <ArticlePreview
               date={'1. září'}
@@ -95,7 +106,7 @@ const Home = () => {
                 'Viníci dopravních nehod podle továrních značek 2021: Patnácti největším hříšníkům kraluje Iveco'
               }
             />
-            <ArticlePreview
+            {/* <ArticlePreview
               date={'3. července'}
               title={
                 'Žaludek na vodě, motání hlavy a slabost. Nejlepší pomocníci proti nevolnosti, které najdete ve spíži'
@@ -106,9 +117,9 @@ const Home = () => {
               title={
                 'Staré džíny nevyhazovat! Vyrobte si z nich prostírání, zástěru nebo kabelku '
               }
-            />
+            /> */}
           </SubsectionTwo>
-        </SecondColumnContainer>
+        </ThirdColumnContainer>
         {/* <SquareBlock
           title="Ukrajinský jazyk"
           cardColor="#ffd700"
