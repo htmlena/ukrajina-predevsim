@@ -13,14 +13,20 @@ const Home = () => {
       'firstColumn'
       'secondColumn'
       'thirdColumn';
-    // padding: 0 1.2rem;
+    padding: 0 1.2rem;
+    grid-row-gap: 2rem;
+
     ${mq.mediumUp.css`
       flex-direction: row;
-      grid-template-areas: 'firstColumn secondColumn thirdColumn';
+      grid-template-areas: 'firstColumn'
+      'secondColumn thirdColumn';
+      // grid-template-areas: 'firstColumn secondColumn thirdColumn';
+      grid-column-gap: 2rem;
  `}
     ${mq.largeUp.css`
   // flex-direction: row;
     padding: 0 3rem;
+    grid-template-areas: 'firstColumn secondColumn thirdColumn';
  `}
       ${mq.xlarge.css`
       padding: 0;
@@ -30,9 +36,6 @@ const Home = () => {
   const FirstColumnContainer = styled.section`
     display: flex;
     grid-area: firstColumn;
-    ${mq.largeUp.css`
-      flex-basis: 40%;
- `}
   `;
 
   const SecondColumnContainer = styled.section`
@@ -42,7 +45,6 @@ const Home = () => {
     justify-content: space-around;
     ${mq.largeUp.css`
       flex-direction: row;
-      flex-basis: 50%;
  `}
   `;
 
@@ -50,15 +52,18 @@ const Home = () => {
     grid-area: thirdColumn;
   `;
 
-  const SubsectionOne = styled.section`
+  const SubsectionOne = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     ${mq.mediumUp.css`
-      flex-basis: 40%;
+      // flex-basis: 40%;
  `}
   `;
-  const SubsectionTwo = styled.section`
+  const SubsectionTwo = styled.div`
     border: 1px solid #e1e1e1;
     ${mq.mediumUp.css`
-      flex-basis: 40%;
+      // flex-basis: 40%;
  `}
   `;
 
@@ -76,14 +81,18 @@ const Home = () => {
         </FirstColumnContainer>
         <SecondColumnContainer>
           <SubsectionOne>
-            <PreviewSection
-              title={'Článek'}
-              image={'artur-zhadan-wv7GyOu66r8-unsplash.webp'}
-            />
-            <PreviewSection
-              title={'Článek'}
-              image={'volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
-            />
+            <div>
+              <PreviewSection
+                title={'Článek'}
+                image={'artur-zhadan-wv7GyOu66r8-unsplash.webp'}
+              />
+            </div>
+            <div>
+              <PreviewSection
+                title={'Článek'}
+                image={'volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
+              />
+            </div>
           </SubsectionOne>
         </SecondColumnContainer>
         <ThirdColumnContainer>
@@ -106,13 +115,13 @@ const Home = () => {
                 'Viníci dopravních nehod podle továrních značek 2021: Patnácti největším hříšníkům kraluje Iveco'
               }
             />
-            {/* <ArticlePreview
+            <ArticlePreview
               date={'3. července'}
               title={
                 'Žaludek na vodě, motání hlavy a slabost. Nejlepší pomocníci proti nevolnosti, které najdete ve spíži'
               }
             />
-            <ArticlePreview
+            {/* <ArticlePreview
               date={'3. června'}
               title={
                 'Staré džíny nevyhazovat! Vyrobte si z nich prostírání, zástěru nebo kabelku '
