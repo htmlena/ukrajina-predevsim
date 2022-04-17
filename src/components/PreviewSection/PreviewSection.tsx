@@ -7,9 +7,8 @@ const PreviewSectionContainer = styled.div`
 `;
 
 const PreviewImage = styled.div<{ image: string }>`
-  background: ${(props) => `url(${props.image}) no-repeat center/100%`};
+  background: ${(props) => `url(${props.image}) no-repeat center/cover`};
   position: relative;
-  width: 330px;
   height: 220px;
 `;
 
