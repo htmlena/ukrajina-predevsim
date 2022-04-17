@@ -18,15 +18,16 @@ const Home = () => {
 
     ${mq.mediumUp.css`
       flex-direction: row;
-      grid-template-areas: 'firstColumn'
+      grid-template-areas: 'firstColumn firstColumn'
       'secondColumn thirdColumn';
-      // grid-template-areas: 'firstColumn secondColumn thirdColumn';
+      grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem;
  `}
     ${mq.largeUp.css`
   // flex-direction: row;
     padding: 0 3rem;
     grid-template-areas: 'firstColumn secondColumn thirdColumn';
+    grid-template-columns: 1.5fr 1fr 1fr;
  `}
       ${mq.xlarge.css`
       padding: 0;
@@ -83,13 +84,17 @@ const Home = () => {
           <SubsectionOne>
             <div>
               <PreviewSection
-                title={'Článek'}
+                title={
+                  'Ukrajinské umění bylo vždy víc aktivistické Ukrajinské umění bylo vždy víc aktivistické'
+                }
                 image={'artur-zhadan-wv7GyOu66r8-unsplash.webp'}
               />
             </div>
             <div>
               <PreviewSection
-                title={'Článek'}
+                title={
+                  'Plošná pomoc lidem inflaci jedině zhorší, řekla ekonomka, která radí Fialovi'
+                }
                 image={'volodymyr-tokar-W6eVy5wy8-M-unsplash.webp'}
               />
             </div>
