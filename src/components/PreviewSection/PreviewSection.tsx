@@ -1,11 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-const PreviewSectionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const PreviewImage = styled.div<{ image: string }>`
   background: ${(props) => `url(${props.image}) no-repeat center/cover`};
   position: relative;
@@ -22,16 +17,21 @@ const PreviewOverlay = styled.div`
   opacity: 0.3;
 `;
 
-type PreviewTitleProps = {
-  title: string;
-  image: string;
-};
-
 const PreviewTitle = styled.div`
   font-weight: 600;
   border-bottom: 2px solid black;
   padding: 0.6rem;
 `;
+
+const PreviewSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+type PreviewTitleProps = {
+  title: string;
+  image: string;
+};
 
 export const PreviewSection: FC<PreviewTitleProps> = ({ title, image }) => {
   return (

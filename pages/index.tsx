@@ -27,7 +27,7 @@ const Home = () => {
   // flex-direction: row;
     padding: 0 3rem;
     grid-template-areas: 'firstColumn secondColumn thirdColumn';
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
  `}
       ${mq.xlarge.css`
       padding: 0;
@@ -50,6 +50,7 @@ const Home = () => {
   `;
 
   const ThirdColumnContainer = styled.section`
+    display: flex;
     grid-area: thirdColumn;
   `;
 
@@ -126,12 +127,18 @@ const Home = () => {
                 'Žaludek na vodě, motání hlavy a slabost. Nejlepší pomocníci proti nevolnosti, které najdete ve spíži'
               }
             />
-            {/* <ArticlePreview
+            <ArticlePreview
               date={'3. června'}
               title={
                 'Staré džíny nevyhazovat! Vyrobte si z nich prostírání, zástěru nebo kabelku '
               }
-            /> */}
+            />
+            <ArticlePreview
+              date={'3. června'}
+              title={
+                'Staré džíny nevyhazovat! Vyrobte si z nich prostírání, zástěru nebo kabelku '
+              }
+            />
           </SubsectionTwo>
         </ThirdColumnContainer>
         {/* <SquareBlock
